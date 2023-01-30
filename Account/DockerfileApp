@@ -1,0 +1,13 @@
+FROM python:3.9
+
+WORKDIR /Account
+
+COPY ./requirements.txt /Account/requirements.txt
+
+RUN pip install --no-cache-dir --upgrade -r /Account/requirements.txt
+
+COPY . /Account
+
+EXPOSE 4000
+
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]

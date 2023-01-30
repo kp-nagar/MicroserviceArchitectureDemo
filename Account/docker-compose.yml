@@ -1,0 +1,9 @@
+version: "3.0"
+services:
+  account:
+    build:
+#      context: . File name must be Dockerfile
+      context: .
+      dockerfile: DockerfileApp
+    ports:
+      - "4000:8000"
