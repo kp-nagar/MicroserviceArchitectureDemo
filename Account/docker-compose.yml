@@ -3,7 +3,7 @@ services:
   account:
     build:
 #      context: . File name must be Dockerfile
-      context: .
-      dockerfile: DockerfileApp
+      context: ../setup_temp
+      dockerfile: ../Account/DockerfileApp
     ports:
       - "4000:8000"

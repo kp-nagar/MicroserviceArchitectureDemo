@@ -2,11 +2,12 @@ FROM python:3.9-alpine
 
 WORKDIR /Account
 
-COPY ./requirements.txt /Account/requirements.txt
+COPY micro_util /micro_util
+COPY Account/requirements.txt /Account/requirements.txt
 
 RUN pip install --no-cache-dir --upgrade -r /Account/requirements.txt
 
-COPY . /Account
+COPY /Account /Account
 
 EXPOSE 4000
 
