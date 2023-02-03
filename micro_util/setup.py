@@ -3,9 +3,9 @@ import setuptools
 
 setuptools.setup(
     name="micro_util",
-    version="0.1",
+    version="0.3",
     install_requires=[
-
+        "setuptools==61.0"
     ],
     author="Kumarpal Nagar",
     author_email="kumarpal.nagar@gmail.com",
