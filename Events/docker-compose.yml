@@ -1,0 +1,9 @@
+version: "3.0"
+services:
+  events:
+    build:
+#      context: . File name must be Dockerfile
+      context: ../setup_temp
+      dockerfile: ../Events/DockerfileApp
+    ports:
+      - "4000:8000"

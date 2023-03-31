@@ -1,0 +1,14 @@
+FROM python:3.9-alpine
+
+WORKDIR /Events
+
+COPY micro_util /micro_util
+COPY Events/requirements.txt /Events/requirements.txt
+
+RUN pip install --no-cache-dir --upgrade -r /Events/requirements.txt
+
+COPY /Events /Events
+
+EXPOSE 4000
+
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
