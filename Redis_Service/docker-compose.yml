@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  redis_service:
+    restart: always
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
+    command:
+      - /etc/redis/redis.conf
+    volumes:
+      - ./etc/redis:/etc/redis
+      - /var/redis:/var/redis
